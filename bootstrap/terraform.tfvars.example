@@ -1,0 +1,7 @@
+# Copy this file to terraform.tfvars and fill in your values.
+# terraform.tfvars is gitignored — never commit real values.
+
+aws_region          = "us-east-1"
+state_bucket_name   = "terraform-state-<your-account-id>"
+dynamodb_table_name = "terraform-locks"
+project             = "aws-eks-forge"
