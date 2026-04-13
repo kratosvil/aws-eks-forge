@@ -52,3 +52,9 @@ def version():
         "pod":        POD_NAME,
         "node":       NODE_NAME,
     }
+
+
+@app.get("/items")
+def items():
+    # BUG intencional v2 — simula fallo en nuevo endpoint
+    raise Exception("Internal error: database connection failed")
