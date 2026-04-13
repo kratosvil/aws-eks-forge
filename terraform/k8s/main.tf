@@ -75,7 +75,7 @@ resource "kubernetes_deployment" "blue" {
   }
 
   spec {
-    replicas = var.replicas
+    replicas = var.blue_replicas
 
     selector {
       match_labels = {
@@ -182,7 +182,7 @@ resource "kubernetes_deployment" "green" {
   }
 
   spec {
-    replicas = var.replicas
+    replicas = var.green_replicas
 
     selector {
       match_labels = {

@@ -34,8 +34,14 @@ variable "green_weight" {
   default     = 0
 }
 
-variable "replicas" {
-  description = "Number of replicas per deployment slot"
+variable "blue_replicas" {
+  description = "Number of replicas for blue slot (active)"
   type        = number
   default     = 2
+}
+
+variable "green_replicas" {
+  description = "Number of replicas for green slot (0 = standby, scale up before switch)"
+  type        = number
+  default     = 0
 }
